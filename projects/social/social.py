@@ -2,6 +2,7 @@ class User:
     def __init__(self, name):
         self.name = name
 
+
 class SocialGraph:
     def __init__(self):
         self.last_id = 0
@@ -45,8 +46,16 @@ class SocialGraph:
         # !!!! IMPLEMENT ME
 
         # Add users
+        for i in range(num_users):
+            self.add_user(i)
 
         # Create friendships
+        # you could create a list with all possible friendship combinations
+        ## [(1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+        # shuffle the list
+        # then grab the first N elements from the list.
+
+        total_friendships = num_users * avg_friendships
 
     def get_all_social_paths(self, user_id):
         """
